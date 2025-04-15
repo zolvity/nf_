@@ -13,17 +13,38 @@
     }
 
     body {
-      background-color: #0e0e0e;
       color: #fff;
       font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 60px 20px;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
       cursor: url('https://r2.guns.lol/26ffccc8-1250-4c36-9785-46471dc39a94.webp') 16 16, auto !important;
+      position: relative;
     }
 
-    img {
+    /* Video background */
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* To ensure the video stays behind content */
+    }
+
+    /* Profile Section */
+    .profile {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -31,18 +52,21 @@
       object-fit: cover;
     }
 
-    h1 {
-      font-size: 20px;
+    .profile h1 {
+      font-size: 24px;
       font-weight: 600;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
+    /* Links Section */
     .links {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
       width: 100%;
       max-width: 400px;
+      position: relative;
+      z-index: 1;
     }
 
     .link {
@@ -70,36 +94,7 @@
       border: none;
       cursor: pointer;
       transition: background 0.3s;
+      margin-top: 20px;
     }
 
-    .btn:hover {
-      background-color: #333;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Profile Section -->
-  <img src="https://via.placeholder.com/100" alt="Profile" />
-  <h1>@yourhandle</h1>
-
-  <!-- Links Section -->
-  <div class="links">
-    <a class="link" href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-    <a class="link" href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
-    <a class="link" href="https://discord.gg/yourserver" target="_blank">Discord</a>
-    <!-- Add more links as needed -->
-  </div>
-
-  <!-- Background Change Button -->
-  <button class="btn" onclick="changeBackground()">Change Background Color</button>
-
-  <!-- JavaScript to change background color -->
-  <script>
-    function changeBackground() {
-      document.body.style.backgroundColor = document.body.style.backgroundColor === 'rgb(14, 14, 14)' ? '#333' : '#0e0e0e';
-    }
-  </script>
-
-</body>
-</html>
+    .btn:hover

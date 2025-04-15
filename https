@@ -1,0 +1,21 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Links</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2rem; background: #111; color: #fff; }
+    a { display: block; margin: 1rem 0; color: #00f; text-decoration: none; }
+    .profile-pic { border-radius: 50%; width: 120px; }
+  </style>
+</head>
+<body>
+  <img src="your-profile-pic.jpg" class="profile-pic" alt="Profile Picture">
+  <h1>Your Name</h1>
+  <a href="https://twitter.com/yourhandle">Twitter</a>
+  <a href="https://github.com/yourhandle">GitHub</a>
+  <a href="https://yourstore.com">My Store</a>
+</body>
+</html>

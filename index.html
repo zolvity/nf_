@@ -56,4 +56,114 @@
 
     .profile h1 {
       font-size: 24px;
-      font-weight:
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+      z-index: 1;
+    }
+
+    .link {
+      background-color: #1a1a1a;
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .link:hover {
+      background-color: #333;
+    }
+
+    .btn {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    /* Bubble Cursor Effect */
+    .cursor {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: scale(0);
+      transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+      z-index: 9999;
+      mix-blend-mode: difference;
+    }
+
+    .cursor.active {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video src="https://r2.guns.lol/7e4363b6-5af8-498e-a4bb-27f5fa39db5b.mp4" playsinline loop autoplay muted></video>
+
+  <!-- Profile Section -->
+  <div class="profile">
+    <img src="https://via.placeholder.com/100" alt="Profile" />
+    <h1>@yourhandle</h1>
+    <p>A short description about you!</p>
+  </div>
+
+  <!-- Links Section -->
+  <div class="links">
+    <a class="link" href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+    <a class="link" href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
+    <a class="link" href="https://discord.gg/yourserver" target="_blank">Discord</a>
+    <a class="link" href="https://github.com/yourgithub" target="_blank">GitHub</a>
+  </div>
+
+  <!-- Background Change Button -->
+  <button class="btn" onclick="changeBackground()">Change Background Color</button>
+
+  <!-- JavaScript for the Bubble Cursor -->
+  <script>
+    function changeBackground() {
+      document.body.style.backgroundColor = document.body.style.backgroundColor === 'rgb(14, 14, 14)' ? '#333' : '#0e0e0e';
+    }
+
+    // Bubble cursor effect
+    const cursor = document.createElement("div");
+    cursor.classList.add("cursor");
+    document.body.appendChild(cursor);
+
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
+      cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
+    });
+
+    document.addEventListener("mouseenter", () => {
+      cursor.classList.add("active");
+    });
+
+    document.addEventListener("mouseleave", () => {
+      cursor.classList.remove("active");
+    });
+  </script>
+
+</body>
+</html>

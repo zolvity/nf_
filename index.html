@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Links</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>nf_</title>
   <style>
     body {
-      background: #111;
+      background-color: #111;
       color: #fff;
-      text-align: center;
-      font-family: sans-serif;
-      padding: 50px;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
-    a {
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 2px solid #555;
+    }
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .link {
       display: block;
+      width: 90%;
+      max-width: 300px;
+      padding: 12px 20px;
       margin: 10px auto;
+      background-color: #222;
+      border-radius: 8px;
+      text-align: center;
       color: #0ff;
       text-decoration: none;
-      font-size: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .link:hover {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>My Links</h1>
-  <a href="https://twitter.com/yourname">Twitter</a>
-  <a href="https://youtube.com/yourchannel">YouTube</a>
-  <a href="https://discord.gg/yourserver">Discord</a>
+
+  <img src="https://via.placeholder.com/120" alt="Profile" class="profile-pic" />
+  <h1>@yourname</h1>
+
+  <a href="https://twitter.com/yourhandle" class="link" target="_blank">Twitter</a>
+  <a href="https://youtube.com/yourchannel" class="link" target="_blank">YouTube</a>
+  <a href="https://discord.gg/yourserver" class="link" target="_blank">Discord</a>
+
 </body>
 </html>

@@ -1,55 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Custom Page</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #000;
-      overflow: hidden;
-      cursor: url('https://r2.guns.lol/26ffccc8-1250-4c36-9785-46471dc39a94.webp'), auto !important;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zolvity</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to My Custom Page</h1>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="https://r2.guns.lol/7e4363b6-5af8-498e-a4bb-27f5fa39db5b.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-  <!-- Background Video -->
-  <video autoplay muted loop>
-    <source src="https://r2.guns.lol/7e4363b6-5af8-498e-a4bb-27f5fa39db5b.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <!-- Audio Player (Autoplay) -->
+    <audio autoplay loop>
+        <source src="https://drive.google.com/uc?export=download&id=1T2JTDdLP7EgaXKWzJihfY8NNuMLwzmSQ" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
-  <!-- Background Audio (autoplay, hidden) -->
-  <audio autoplay loop>
-    <source src="https://drive.google.com/file/d/1T2JTDdLP7EgaXKWzJihfY8NNuMLwzmSQ/view?usp=sharing" type="audio/mp3" />
-    Your browser does not support the audio element.
-  </audio>
+    <!-- Profile Section -->
+    <div id="profile">
+        <img src="assets/profile.jpg" alt="Profile Picture" id="profile-pic">
+        <h1>Your Name</h1>
+        <p>Your bio goes here...</p>
+    </div>
 
-  <!-- 🔥 Custom Cursor Effects JS -->
-  <script src="https://assets.guns.lol/cursor-effects.js"></script>
+    <!-- Sparkle Cursor Effect -->
+    <div id="cursor">
+        <img src="https://assets.guns.lol/sparkle_white.gif" alt="Cursor Effect" id="cursor-effect">
+    </div>
+
+    <script src="custom.js"></script>
 </body>
 </html>

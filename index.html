@@ -12,6 +12,22 @@
       box-sizing: border-box;
     }
 
+    /* Full-screen video background */
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* Ensure video stays behind content */
+    }
+
     body {
       color: #fff;
       font-family: 'Inter', sans-serif;
@@ -21,27 +37,13 @@
       justify-content: center;
       height: 100vh;
       overflow: hidden;
-      cursor: url('https://r2.guns.lol/26ffccc8-1250-4c36-9785-46471dc39a94.webp') 16 16, auto !important;
       position: relative;
     }
 
-    /* Video background */
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1; /* To ensure the video stays behind content */
-    }
-
-    /* Profile Section */
     .profile {
       text-align: center;
-      margin-bottom: 30px;
-      position: relative;
       z-index: 1;
+      margin-bottom: 30px;
     }
 
     .profile img {
@@ -54,16 +56,4 @@
 
     .profile h1 {
       font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-
-    /* Links Section */
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      max-width: 400px;
-      position: relative;
-      z-index:
+      font-weight:

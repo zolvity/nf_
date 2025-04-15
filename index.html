@@ -20,6 +20,7 @@
       flex-direction: column;
       align-items: center;
       padding: 60px 20px;
+      cursor: url('https://r2.guns.lol/26ffccc8-1250-4c36-9785-46471dc39a94.webp') 16 16, auto !important;
     }
 
     img {
@@ -58,14 +59,47 @@
     .link:hover {
       background-color: #333;
     }
+
+    /* Button Style */
+    .btn {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Profile Section -->
   <img src="https://via.placeholder.com/100" alt="Profile" />
   <h1>@yourhandle</h1>
 
+  <!-- Links Section -->
   <div class="links">
     <a class="link" href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
     <a class="link" href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
     <a class="link" href="https://discord.gg/yourserver" target="_blank">Discord</a>
+    <!-- Add more links as needed -->
+  </div>
+
+  <!-- Background Change Button -->
+  <button class="btn" onclick="changeBackground()">Change Background Color</button>
+
+  <!-- JavaScript to change background color -->
+  <script>
+    function changeBackground() {
+      document.body.style.backgroundColor = document.body.style.backgroundColor === 'rgb(14, 14, 14)' ? '#333' : '#0e0e0e';
+    }
+  </script>
+
+</body>
+</html>

@@ -84,36 +84,20 @@
       background-color: #333;
     }
 
-    .btn {
-      background-color: #1a1a1a;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-top: 20px;
-    }
-
-    .btn:hover {
-      background-color: #333;
-    }
-
-    /* Bubble Cursor Effect */
+    /* Custom SVG Cursor */
     .cursor {
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.7);
-      border-radius: 50%;
       pointer-events: none;
-      transform: scale(0);
-      transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+      width: 40px;  /* Adjust cursor size */
+      height: 40px; /* Adjust cursor size */
       z-index: 9999;
-      mix-blend-mode: difference;
+      transition: transform 0.1s ease;
     }
 
-    .cursor.active {
-      transform: scale(1);
+    .cursor svg {
+      width: 100%;
+      height: 100%;
+      fill: #fff; /* Custom cursor color */
     }
   </style>
 </head>
@@ -137,31 +121,21 @@
     <a class="link" href="https://github.com/yourgithub" target="_blank">GitHub</a>
   </div>
 
-  <!-- Background Change Button -->
-  <button class="btn" onclick="changeBackground()">Change Background Color</button>
-
-  <!-- JavaScript for the Bubble Cursor -->
+  <!-- JavaScript for Custom SVG Cursor -->
   <script>
-    function changeBackground() {
-      document.body.style.backgroundColor = document.body.style.backgroundColor === 'rgb(14, 14, 14)' ? '#333' : '#0e0e0e';
-    }
-
-    // Bubble cursor effect
+    // Create the SVG cursor
     const cursor = document.createElement("div");
     cursor.classList.add("cursor");
+    cursor.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M0 0v24h24V0Zm4.8 4.8H16V8h3.2v11.2H16V8H8v11.2H4.8V8Z"></path>
+      </svg>`;
     document.body.appendChild(cursor);
 
+    // Follow the mouse pointer
     document.addEventListener("mousemove", (e) => {
       cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
       cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
-    });
-
-    document.addEventListener("mouseenter", () => {
-      cursor.classList.add("active");
-    });
-
-    document.addEventListener("mouseleave", () => {
-      cursor.classList.remove("active");
     });
   </script>
 

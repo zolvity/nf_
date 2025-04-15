@@ -14,7 +14,7 @@ body {
     height: 100vh;
     background-color: black;
     overflow: hidden;
-    cursor: url('https://r2.guns.lol/26ffccc8-1250-4c36-9785-46471dc39a94.webp'), auto;
+    cursor: none; /* Hide default cursor */
 }
 
 #background-video {
@@ -38,4 +38,19 @@ body {
     border-radius: 50%;
     border: 5px solid white;
     margin-bottom: 20px;
+}
+
+/* Custom Cursor */
+#cursor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#cursor-effect {
+    width: 30px;  /* Adjust size */
+    height: 30px; /* Adjust size */
+    position: absolute;
+    top: -15px; /* Center the cursor image on the pointer */
+    left: -15px; /* Center the cursor image on the pointer */
 }

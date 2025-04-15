@@ -3,47 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>nf_</title>
+  <title>@yourhandle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      padding: 60px 20px;
     }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
+
+    img {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       margin-bottom: 20px;
       object-fit: cover;
-      border: 2px solid #555;
     }
+
     h1 {
-      margin: 0;
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 30px;
     }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      max-width: 400px;
+    }
+
     .link {
-      display: block;
-      width: 90%;
-      max-width: 300px;
-      padding: 12px 20px;
-      margin: 10px auto;
-      background-color: #222;
-      border-radius: 8px;
-      text-align: center;
-      color: #0ff;
+      background-color: #1a1a1a;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 500;
+      transition: background 0.3s;
     }
+
     .link:hover {
       background-color: #333;
     }
@@ -51,12 +62,10 @@
 </head>
 <body>
 
-  <img src="https://via.placeholder.com/120" alt="Profile" class="profile-pic" />
-  <h1>@yourname</h1>
+  <img src="https://via.placeholder.com/100" alt="Profile" />
+  <h1>@yourhandle</h1>
 
-  <a href="https://twitter.com/yourhandle" class="link" target="_blank">Twitter</a>
-  <a href="https://youtube.com/yourchannel" class="link" target="_blank">YouTube</a>
-  <a href="https://discord.gg/yourserver" class="link" target="_blank">Discord</a>
-
-</body>
-</html>
+  <div class="links">
+    <a class="link" href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+    <a class="link" href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
+    <a class="link" href="https://discord.gg/yourserver" target="_blank">Discord</a>

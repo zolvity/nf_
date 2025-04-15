@@ -1,3 +1,56 @@
+/* CSS Variables */
+:root {
+    --presenceUsernameColor: #ffffff;
+    --presenceStatusColor: rgba(255, 255, 255, 0.7);
+    --presenceContainerBackground: rgba(255, 255, 255, 0.07);
+    --presenceContainerBorder: 2px solid rgba(255, 255, 255, 0.05);
+    --discordServerMembers: rgba(255, 255, 255, 0.6);
+    --secondTabBackground: rgba(255, 255, 255, 0.07);
+    --secondTabBorder: 2px solid rgba(255, 255, 255, 0.05);
+    --discordMissingIcon: rgba(255, 255, 255, 0.25);
+    --modernLayoutSeperator: rgba(255, 255, 255, 0.12);
+    --modernLayoutSeperatorBorder: rgba(255, 255, 255, 0.12);
+    --discordAvatarBorder: 2px solid rgba(0, 0, 0, 0.15);
+    --badgeContainerBackground: rgba(255, 255, 255, 0.08);
+    --badgeContainerBorder: 2px solid rgba(255, 255, 255, 0.04);
+    --userBadge: 20px;
+    --textColor: #ffffff;
+    --textColorDarker: rgba(255, 255, 255, 0.5);
+    --iconColor: #ffffff;
+    --backgroundColor: #000000;
+    --joinStatus: rgba(255, 255, 255, 0.65);
+    --audioPlayerBar: rgba(255, 255, 255, 0.35);
+    --avatarBorder: 2px solid rgba(0, 0, 0, 0.4);
+    --containerColor: rgba(0, 0, 0, 0.05);
+    --containerBlur: 0px;
+    --containerRadius: 50px;
+    --containerWidth: 40rem;
+    --containerPadding: 25px;
+    --volumeBackgroundcolor: rgba(0, 0, 0, 0.05);
+    --volumeBorder: 2px solid rgba(0, 0, 0, 0.045);
+    --colorUsernameGlow: 0px 0px 16.5px #ffffff;
+    --usernameEffects: url(https://assets.guns.lol/sparkle_white.gif);
+    --buttonBackground: rgba(255, 255, 255, 0.22);
+    --buttonBorder: 2px solid rgba(255, 255, 255, 0.12);
+    --buttonRadius: 12px;
+    --buttonAlign: center;
+    --buttonBackgroundHover: rgba(255, 255, 255, 0.32);
+    --buttonBorderHover: 2px solid rgba(255, 255, 255, 0.25);
+    --buttonUrlColor: rgba(255, 255, 255, 0.65);
+    --profileViewsContainerBorder: 2px solid rgba(255, 255, 255, 0.04);
+    --templatePreviewContainerBackground: rgba(0, 0, 0, 0.4);
+    --platformTextColor: rgba(255, 255, 255, 0.4);
+    --secondTabWidgetDescription: rgba(255, 255, 255, 0.6);
+    --audioIconBackground: rgba(255, 255, 255, 0.2);
+    --progessBarFull: rgba(255, 255, 255, 0.3);
+    --progessBarPlaying: #ffffff;
+    --controlButtonsOther: rgba(255, 255, 255, 0.5);
+    --controlButtonPlaying: #ffffff;
+    --controlTextColor: rgba(255, 255, 255, 0.7);
+    --modernLayoutBottomLeftDivider: rgba(255, 255, 255, 0.14);
+    --sleekLayoutTopRightDivider: rgba(255, 255, 255, 0.14);
+}
+
 /* Global Reset */
 * {
     margin: 0;
@@ -7,16 +60,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: white;
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black;
     overflow: hidden;
-    cursor: none; /* Hide default cursor */
+    cursor: url('https://r2.guns.lol/diamond_axe_cursor.png'), auto; /* Diamond Axe Cursor */
 }
 
+/* Full Screen Background Video */
 #background-video {
     position: absolute;
     top: 0;
@@ -27,6 +81,7 @@ body {
     z-index: -1;
 }
 
+/* Profile Section */
 #profile {
     text-align: center;
     z-index: 1;
@@ -36,11 +91,11 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid white;
+    border: var(--discordAvatarBorder);
     margin-bottom: 20px;
 }
 
-/* Custom Cursor */
+/* Custom Cursor Effect */
 #cursor {
     position: absolute;
     pointer-events: none;
@@ -48,9 +103,36 @@ body {
 }
 
 #cursor-effect {
-    width: 30px;  /* Adjust size */
+    width: 30px; /* Adjust size */
     height: 30px; /* Adjust size */
     position: absolute;
     top: -15px; /* Center the cursor image on the pointer */
     left: -15px; /* Center the cursor image on the pointer */
+}
+
+/* Button Styling */
+button {
+    background-color: var(--buttonBackground);
+    border: var(--buttonBorder);
+    border-radius: var(--buttonRadius);
+    padding: 10px 20px;
+    color: var(--buttonUrlColor);
+    cursor: pointer;
+    font-size: 16px;
+    text-align: var(--buttonAlign);
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: var(--buttonBackgroundHover);
+    border: var(--buttonBorderHover);
+}
+
+/* Container Style */
+.container {
+    background-color: var(--containerColor);
+    border-radius: var(--containerRadius);
+    padding: var(--containerPadding);
+    width: var(--containerWidth);
+    backdrop-filter: blur(var(--containerBlur));
 }
